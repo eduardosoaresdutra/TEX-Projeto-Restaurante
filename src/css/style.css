@@ -1,0 +1,84 @@
+* {
+  font-family: "Ropa Sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.m-1 {
+  margin: 1 rem;
+}
+
+.mx-1 {
+  margin: 0 1.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.logo_slogan {
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px rgba(1, 1, 8, 0.6);
+}
+
+.header {
+  min-width: 1170px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0 !important;
+  background-image: url("/images/backgrounds/background_home_2.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-position-y: -300px;
+}
+
+.header-heightMiddle {
+  height: 300px;
+  border: 1px solid #000;
+}
+
+.navbar_nav, .socialMedia_icones {
+  list-style: none;
+}
+
+.navbar_link {
+  color: #f1f806;
+  text-transform: uppercase;
+}
+.navbar_link:hover {
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1170px) {
+  .header, .navbar_nav {
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .socialMedia_icones {
+    flex-flow: column;
+  }
+  .socialMedia_item {
+    margin: 1 rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

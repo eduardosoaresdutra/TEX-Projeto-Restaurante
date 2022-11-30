@@ -3,10 +3,6 @@
 @use 'mixins' as mx;
 @use 'extends';
 
-.text-white {
-    color: v.$linkHover;
-}
-
 .m-1 {
     margin: v.$m1;
 }
@@ -19,6 +15,10 @@
     padding: v.$p1;
 }
 
+.text-white {
+    color: v.$linkHover;
+}
+
 .logo_slogan {
     font-size: 3rem;
     text-shadow: 2px 2px 1px rgba(1, 1, 8, 0.6);
@@ -26,6 +26,21 @@
 
 .socialMedia_icones {
     @extend %list-none;
+}
+
+.servicos {
+    @include mx.box;
+    @include mx.flex-center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.servicos_card {
+    width: 31%;
+    // margin-right: 0.6rem;
+    margin-bottom: v.$m1;
+    height: 400px;
+    box-shadow: 8px 8px 10px #999;
 }
 
 .header {

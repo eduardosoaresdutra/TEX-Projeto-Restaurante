@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.socialMedia_icones, .navbar_nav {
+  list-style: none;
+}
+
 .text-white {
   color: #fff;
 }
@@ -46,21 +50,16 @@
   border: 1px solid #000;
 }
 
-.navbar_nav, .socialMedia_icones {
-  list-style: none;
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 .navbar_link {
   color: #f1f806;
   text-transform: uppercase;
 }
 .navbar_link:hover {
   color: #fff;
-}
-
-.navbar {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .container {
@@ -72,6 +71,12 @@
   .header, .navbar_nav {
     flex-flow: column;
     min-width: 100%;
+  }
+  .navbar {
+    z-index: 1;
+  }
+  .socialMedia {
+    z-index: 2;
   }
   .socialMedia_icones {
     flex-flow: column;

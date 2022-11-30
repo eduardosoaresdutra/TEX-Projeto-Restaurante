@@ -1,13 +1,7 @@
 // Parei de acompanhar no tempo 9:49 da aula 16, vídeo 14.
 @use 'variaveis' as v;
 @use 'mixins' as mx;
-
-* {
-    font-family: v.$fonte;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@use 'extends';
 
 .text-white {
     color: v.$linkHover;
@@ -30,6 +24,10 @@
     text-shadow: 2px 2px 1px rgba(1, 1, 8, 0.6);
 }
 
+.socialMedia_icones {
+    @extend %list-none;
+}
+
 .header {
     @include mx.box;
 
@@ -39,7 +37,7 @@
 
     padding-bottom: 0 !important;
 
-    background-image: url(v.$bgHome);
+    background-image: url(mx.bgImage(v.$bgHome_2));
     background-size: 100%;
     background-position: center;
     background-position-y: -300px;
@@ -50,22 +48,22 @@
     border: 1px solid #000;
 }
 
-.navbar_nav, .socialMedia_icones {
-    list-style: none;
-}
-
-.navbar_link {
-    color: v.$link;
-    text-transform: uppercase;
-
-    &:hover {
-        color: v.$linkHover;
-    }
-}
-
 .navbar {
     width: 100%;
     background-color: v.$bgColor;
+
+    &_nav {
+        @extend %list-none;
+    }
+
+    &_link {
+        color: v.$link;
+        text-transform: uppercase;
+
+        &:hover {
+            color: v.$linkHover;
+        }
+    }
 }
 
 .container {
@@ -77,10 +75,17 @@
         flex-flow: column;
         min-width: 100%;
     }
-    .socialMedia_icones {
-        flex-flow: column;
+    .navbar {
+        z-index: 1;
     }
-    .socialMedia_item {
-        margin: v.$m1;
+    .socialMedia {
+        z-index: 2;
+    
+        &_icones {
+            flex-flow: column;
+        }
+        &_item {
+            margin: v.$m1;
+        }
     }
 }
